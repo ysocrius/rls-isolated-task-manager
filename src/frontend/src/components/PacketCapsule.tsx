@@ -76,13 +76,7 @@ export const PacketCapsule = memo(({ task, onToggleStatus, onDelete, onUpdateTit
                         : 'bg-emerald-50/50 border-emerald-500/50 text-emerald-700/70 hover:opacity-100 opacity-60'}
         `}>
                 {/* Delete Action (Mobile: Always Visible | Desktop: Hover) */}
-                <button
-                    onClick={handleDelete}
-                    className="absolute -right-2 -top-2 w-5 h-5 bg-stone-800 text-stone-200 rounded-full 
-                flex items-center justify-center text-xs opacity-100 lg:opacity-0 lg:group-hover:opacity-100 transition-opacity hover:bg-red-500 z-10"
-                >
-                    ×
-                </button>
+
                 <div className="flex items-center gap-4 overflow-hidden">
                     {/* Protocol Slot -> Static Tag */}
                     <span className={`
@@ -117,14 +111,24 @@ export const PacketCapsule = memo(({ task, onToggleStatus, onDelete, onUpdateTit
                 </div>
 
                 {/* Size Slot -> Priority/Action */}
-                <div className="flex items-center gap-3">
-                    <span className="text-xs font-bold opacity-60 group-hover:opacity-100 transition-opacity">
+                <div className="flex items-center gap-2">
+                    <span className="text-xs font-bold opacity-60 group-hover:opacity-100 transition-opacity hidden sm:inline mr-2">
                         {isPending ? 'HIGH_PRIORITY' : 'SECURE'}
                     </span>
+
+                    {/* Delete Action (Now Inline & Visible) */}
+                    <button
+                        onClick={handleDelete}
+                        className="w-8 h-8 flex items-center justify-center rounded-full text-stone-400 hover:bg-red-100 hover:text-red-600 transition-colors"
+                        title="Terminate Process"
+                    >
+                        ×
+                    </button>
+
                     {/* Expand Chevron */}
                     <button
                         onClick={(e) => { e.stopPropagation(); setIsExpanded(!isExpanded); }}
-                        className={`w-10 h-10 flex items-center justify-center rounded-full hover:bg-stone-200/50 transition-transform duration-300 ${isExpanded ? 'rotate-180' : ''}`}
+                        className={`w-8 h-8 flex items-center justify-center rounded-full hover:bg-stone-200/50 transition-transform duration-300 ${isExpanded ? 'rotate-180' : ''}`}
                     >
                         ▼
                     </button>
