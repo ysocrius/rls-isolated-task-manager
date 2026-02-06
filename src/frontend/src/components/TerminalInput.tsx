@@ -32,7 +32,6 @@ export const TerminalInput = ({ onTaskCreate }: TerminalInputProps) => {
                     autoFocus
                 />
             </div>
-            <div className="w-0.5 h-5 bg-white animate-pulse shadow-[0_0_8px_rgba(255,255,255,0.8)]" />
         </div>
     );
 };
