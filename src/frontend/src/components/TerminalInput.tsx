@@ -26,7 +26,7 @@ export const TerminalInput = ({ onTaskCreate }: TerminalInputProps) => {
                     value={input}
                     onChange={(e) => setInput(e.target.value)}
                     onKeyDown={handleKeyDown}
-                    className="flex-1 bg-transparent border-none focus:ring-0 text-stone-300 placeholder-stone-500 caret-emerald-500"
+                    className="flex-1 bg-transparent border-none focus:ring-0 text-stone-300 placeholder-stone-500 caret-white"
                     placeholder="Enter new task..."
                     autoComplete="off"
                     autoFocus
