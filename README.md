@@ -8,6 +8,12 @@
 **A high-fidelity, data-sovereign task orchestration platform built for distributed agent networks.**
 Designed with a "Solarpunk" aesthetic (`glassmorphism`, `emerald-500`) and engineered with enterprise-grade security logic.
 
+## 🎬 Demo
+
+![Platform Demo](demo.gif)
+
+*Full-stack task management with real-time updates, glassmorphic UI, and row-level security isolation.*
+
 ## 🏗️ Architecture
 
 ### 🛡️ Double-Blind Data Isolation
