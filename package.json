@@ -9,6 +9,7 @@
   "scripts": {
     "start": "ts-node src/backend/server.ts",
     "dev": "nodemon src/backend/server.ts",
+    "build": "cd src/frontend && npm install && npm run build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
